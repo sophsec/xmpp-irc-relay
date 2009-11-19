@@ -1,0 +1,8 @@
+:xmpp:
+  :user: USER@HOST/RESOURCE
+  :password: PASSWORD
+  :channel: CHANNEL@conference.HOST/NICK
+:irc:
+  :server: HOST
+  :nick: NICK
+  :channel: CHANNEL
