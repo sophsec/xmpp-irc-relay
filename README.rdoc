@@ -2,19 +2,19 @@
 
 A simple XMPP relay to IRC using xmpp4r and and Isaac.
 
-== REQUIREMENTS:
+== Requirements:
 
 * {xmpp4r}[http://home.gna.org/xmpp4r/] >= 0.5
 * {isaac}[http://github.com/ichverstehe/isaac]
 
-== SYNOPSIS:
+== Synopsis:
 
 * After editing config.yaml, filling in the appropriate XMPP and IRC
   connection information:
 
     $ ./relay.rb config.yaml
 
-== EXAMPLE CONFIGURATION:
+== Example Configuration File:
 
   :xmpp:
     :user: USER@HOST/RESOURCE
