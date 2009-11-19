@@ -1,0 +1,6 @@
+config.yaml
+.DS_Store
+*.db
+*.log
+*.swp
+*~
