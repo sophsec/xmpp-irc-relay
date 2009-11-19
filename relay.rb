@@ -16,7 +16,7 @@ module SophSec
         FLOOD_LIMIT = 2.0
 
         def initialize(options={},&block)
-          @xmpp_user= JID.new(options[:xmpp][:user])
+          @xmpp_user = JID.new(options[:xmpp][:user])
           @xmpp_password = options[:xmpp][:password]
 
           @xmpp_channel = JID.new(options[:xmpp][:channel])
@@ -63,9 +63,7 @@ module SophSec
             puts "Relaying messages between #{@xmpp_channel} and #{@irc_channel} on #{@config.server}:#{@config.port}"
           end
 
-          on :channel do
-            to_xmpp(nick,message)
-          end
+          on(:channel) { to_xmpp(nick,message) }
         end
 
         def self.start(options={})
