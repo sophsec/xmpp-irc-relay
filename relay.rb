@@ -63,7 +63,13 @@ module SophSec
             puts "Relaying messages between #{@xmpp_channel} and #{@irc_channel} on #{@config.server}:#{@config.port}"
           end
 
-          on(:channel) { to_xmpp(nick,message) }
+          on :channel, /\001ACTION ([^\001]*)\001/ do
+            to_xmpp(nick,"/me #{match[0]}")
+          end
+
+          on :channel do
+            to_xmpp(nick,message)
+          end
         end
 
         def self.start(options={})
