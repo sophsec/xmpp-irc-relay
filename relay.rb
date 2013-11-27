@@ -56,7 +56,7 @@ module SophSec
             @consumer = Thread.new do
               loop do
                 sleep(@flood_limit)
-                msg('#sophsec',@mesg_queue.pop)
+                msg(@irc_channel,@mesg_queue.pop)
               end
             end
 
